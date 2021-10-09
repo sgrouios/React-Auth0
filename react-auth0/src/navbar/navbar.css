@@ -31,3 +31,7 @@ ul.unstyled {
   nav button {
     margin-top: 13px;
   }
+
+  .auth-btn {
+      float: right;
+  }
