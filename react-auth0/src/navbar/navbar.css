@@ -10,10 +10,14 @@ ul.unstyled {
     padding: 0;
     overflow: hidden;
     background-image: linear-gradient(to bottom right, #f0582a, #eb0685);
+    height: 3rem;
   }
   
   nav li {
+    display: flex;
+    align-items: center;
     float: left;
+    height: 100%;
   }
   
   nav li a {
@@ -27,9 +31,9 @@ ul.unstyled {
   nav li a:hover {
     background-color: #d9390d;
   }
-  
-  nav button {
-    margin-top: 13px;
+
+  nav li:hover {
+    background-color: #d9390d;
   }
 
   .auth-btn {
