@@ -7,14 +7,16 @@ const Profile = () => {
     useEffect(() => {
       const getToken = async () => {
         try{
-          const token = await getAccessTokenSilently({
-            audience:'https://s-grouios-dev.au.auth0.com/api/v2/',
-            scope: 'read:current_user'
+          const token = await getAccessTokenSilently();
+          await fetch("http://localhost:5000/api/test", {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
           });
           console.info(token);
         }
         catch(error){
-          console.error(error);
+          console.error("Error", error);
         }
       }
       getToken();

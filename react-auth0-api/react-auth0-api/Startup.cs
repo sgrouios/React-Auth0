@@ -22,6 +22,15 @@ namespace react_auth0_api
         {
             services.ConfigureJwt(Configuration);
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(configure =>
+                {
+                    configure.AllowAnyOrigin();
+                    configure.AllowAnyMethod();
+                    configure.AllowAnyHeader();
+                });
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "react_auth0_api", Version = "v1" });
@@ -39,6 +48,8 @@ namespace react_auth0_api
             }
 
             app.UseRouting();
+            
+            app.UseCors();
 
             app.UseAuthentication();
 
