@@ -6,11 +6,16 @@ const Profile = () => {
 
     useEffect(() => {
       const getToken = async () => {
-        const token = await getAccessTokenSilently({
-          audience:'https://s-grouios-dev.au.auth0.com/api/v2/',
-          scope: 'read:current_user'
-        });
-        console.info(token);
+        try{
+          const token = await getAccessTokenSilently({
+            audience:'https://s-grouios-dev.au.auth0.com/api/v2/',
+            scope: 'read:current_user'
+          });
+          console.info(token);
+        }
+        catch(error){
+          console.error(error);
+        }
       }
       getToken();
     }, [getAccessTokenSilently]);

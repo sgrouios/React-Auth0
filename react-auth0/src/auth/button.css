@@ -1,4 +1,4 @@
-button {
+.btn-li {
     border: none;
     background-color: inherit;
     color: white;
@@ -9,6 +9,6 @@ button {
     padding: 0 1rem;
 }
 
-button:hover {
+.btn-li:hover {
     cursor: pointer;
 }

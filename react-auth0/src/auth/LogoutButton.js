@@ -8,7 +8,7 @@ const LogoutButton = () => {
         logout({ returnTo: process.env.REACT_APP_BASE_URI })
     }
     return (  
-        <button onClick={logoutUser}>Logout</button>
+        <button className="btn-li" onClick={logoutUser}>Logout</button>
     );
 }
  
