@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>react_auth0_api</RootNamespace>
+    <UserSecretsId>0d5bba11-99aa-481d-ad28-9f70282ddb5d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

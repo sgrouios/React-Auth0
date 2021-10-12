@@ -8,10 +8,11 @@ namespace react_auth0_api.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
+        [HttpGet]
         [Authorize]
-        public async Task<IActionResult> TestEndpoint()
+        public async Task<IActionResult> TestEndpoint([FromHeader] string authorization)
         {
-            return Ok();
+            return Ok(authorization);
         }
     }
 }
